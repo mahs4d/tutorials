@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mahs4d.hashindex</groupId>
+    <artifactId>hashindex</artifactId>
+    <version>${revision}</version>
+    <packaging>jar</packaging>
+
+
+    <properties>
+        <revision>1.0.0-SNAPSHOT</revision>
+
+        <maven.compiler.release>25</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <main.class>com.mahs4d.hashindex.App</main.class>
+
+        <junit.version>5.10.2</junit.version>
+    </properties>
+
+    <name>HashIndex</name>
+    <developers>
+        <developer>
+            <name>Mahdi Sadeghi</name>
+            <email>mahdi74sadeghi@gmail.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

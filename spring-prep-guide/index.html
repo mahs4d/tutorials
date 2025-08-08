@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spring Quick Read Book</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/vendor/hljs-github.min.css" id="hljs-light">
+<link rel="stylesheet" href="assets/vendor/hljs-github-dark.min.css" id="hljs-dark" disabled>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+
+<a class="skip-link" href="#chapter">Skip to chapter</a>
+
+<header class="topbar">
+  <button class="icon-btn" id="sidebar-toggle" aria-label="Toggle chapter list" title="Toggle chapter list">☰</button>
+  <div class="brand">
+    <span class="brand-mark">🌱</span>
+    <span class="brand-text">Spring <strong>Quick Read Book</strong></span>
+  </div>
+
+  <div class="search-wrap">
+    <input type="search" id="search" placeholder="Search all chapters…  ( / )"
+           autocomplete="off" spellcheck="false" aria-label="Search all chapters">
+    <button class="clear-btn" id="search-clear" aria-label="Clear search" hidden>×</button>
+  </div>
+
+  <div class="topbar-right">
+    <div class="progress" title="Chapters marked as read">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <span class="progress-label" id="progress-label">0 / 0</span>
+    </div>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Chapters">
+    <div class="sidebar-head">
+      <span>Chapters</span>
+      <div class="sidebar-actions">
+        <button class="text-btn" id="mark-all">All read</button>
+        <button class="text-btn" id="reset-progress">Reset</button>
+      </div>
+    </div>
+    <ol class="chapter-list" id="chapter-list"></ol>
+    <div class="sidebar-foot" id="sidebar-foot"></div>
+  </nav>
+
+  <main class="main" id="main">
+    <div class="search-results" id="search-results" hidden></div>
+
+    <article class="chapter" id="chapter">
+      <div class="loading" id="loading">Loading the book…</div>
+    </article>
+
+    <nav class="chapter-nav" id="chapter-nav" hidden>
+      <button class="nav-btn" id="prev-btn">← Previous</button>
+      <button class="read-btn" id="read-btn">Mark as read</button>
+      <button class="nav-btn" id="next-btn">Next →</button>
+    </nav>
+  </main>
+
+  <aside class="toc" id="toc" aria-label="On this page">
+    <div class="toc-head">On this page</div>
+    <ul class="toc-list" id="toc-list"></ul>
+  </aside>
+
+</div>
+
+<button class="to-top" id="to-top" aria-label="Back to top" title="Back to top" hidden>↑</button>
+
+<!-- Vendored locally so the page works fully offline, straight from disk. -->
+<script src="assets/vendor/marked.min.js"></script>
+<script src="assets/vendor/highlight.min.js"></script>
+<script src="assets/vendor/lang-groovy.min.js"></script>
+<script src="assets/vendor/lang-dockerfile.min.js"></script>
+<script src="assets/vendor/lang-http.min.js"></script>
+<script src="assets/vendor/lang-properties.min.js"></script>
+<script src="assets/chapters-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

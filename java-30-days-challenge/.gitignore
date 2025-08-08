@@ -1,0 +1,10 @@
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Build
+target/
+
+# Python Virtual Environment
+.venv/
